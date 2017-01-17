@@ -16,7 +16,7 @@ before_install:
 
 install: 
   - sudo opm install
-  - sudo opm install 1testrunner
+  - sudo opm install -l 1testrunner
 
 cache:
   directories:
@@ -24,4 +24,4 @@ cache:
     - '$HOME/.sonar/cache'
 
 script:
-  - 1testrunner -runall tests
+  - ./oscript_modules/bin/1testrunner -runall tests
