@@ -11,12 +11,12 @@ before_install:
   - wget -O os.deb http://oscript.io/downloads/night-build/deb
   - sudo apt-get install mono-complete mono-devel
   - sudo dpkg -i os.deb; sudo apt install -f
-  - sudo oscript /usr/share/oscript/lib/opm/src/opm.os install opm
+  - sudo opm install opm
   - oscript
 
 install: 
-  - sudo oscript /usr/share/oscript/lib/opm/src/opm.os install
-  - sudo oscript /usr/share/oscript/lib/opm/src/opm.os -l 1testrunner
+  - sudo opm install
+  - sudo opm -l 1testrunner
 
 cache:
   directories:
