@@ -24,4 +24,4 @@ cache:
     - '$HOME/.sonar/cache'
 
 script:
-  - sh ./oscript_modules/bin/1testrunner.sh -runall tests
+  - sh ./oscript_modules/bin/1testrunner -runall tests
