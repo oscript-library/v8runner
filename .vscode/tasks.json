@@ -11,18 +11,19 @@
     "isShellCommand": true,
     "showOutput": "silent",
     "tasks": [
-        {
-            "taskName": "Testing project",
-            "args": [
-                 "1testrunner",
-                "-runall",
-                "${workspaceRoot}/tests"
-            ],
-            "echoCommand": true,
-            "showOutput": "always",
+               {
+            "taskName": "xtest",
             "suppressTaskName": true,
-            // "isBuildCommand": false,
-            "isTestCommand": false,
+            "args" : [
+                        
+                        "/media/khorevaa/764B7AA318E25C28/Проекты на OS/os/1testrunner/testrunner.os",
+                        "-runall",
+                        "${cwd}/tests/",
+                        "xddReportPath",
+                        "${cwd}/tests/"
+            ],
+            "isTestCommand": true,
+            "showOutput": "always",
             "problemMatcher": {
                 "fileLocation": "absolute",
                 "pattern": {
@@ -32,7 +33,7 @@
                     "message": 3
                 }
             }
-        },
+         },
         {
             "taskName": "Testing current test-file",
             "args": [
