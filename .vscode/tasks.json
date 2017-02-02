@@ -160,7 +160,7 @@
                  "oscript",
                  "-encoding=utf-8",
                 "-compile",
-                "${file}"
+                "'${file}'"
             ],
             "echoCommand": true,
             "showOutput": "always",
