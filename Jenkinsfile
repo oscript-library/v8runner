@@ -22,7 +22,7 @@ pipeline {
                             junit 'tests.xml'
                         } catch (Exception err) {
                             junit 'tests.xml'
-                            throw err;
+                            //throw err;
                         }
 					}
 					else
