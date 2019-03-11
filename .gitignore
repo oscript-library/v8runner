@@ -1,3 +1,4 @@
 test-reports/*
 *.ospx
 tests.xml
+.scannerwork/
