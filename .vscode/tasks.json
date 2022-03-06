@@ -11,7 +11,7 @@
     "_runner": "terminal",
     "windows": {
         "command": "cmd",
-        "args": ["/c", "chcp 65001 ;"]
+        "args": ["/c", "chcp 65001 & "]
     },
     "linux": {
         "command": "sh",
@@ -70,8 +70,8 @@
             "args": [
                  "1bdd",
                 "${workspaceRoot}/features",
-                "-fail-fast", 
-                "-out", 
+                "-fail-fast",
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
@@ -94,8 +94,8 @@
             "args": [
                  "1bdd",
                 "${file}",
-                "-fail-fast", 
-                "-out", 
+                "-fail-fast",
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
@@ -120,8 +120,8 @@
             "args": [
                  "1bdd",
                 "${fileDirname}/../${fileBasenameNoExtension}.feature",
-                "-fail-fast", 
-                "-out", 
+                "-fail-fast",
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
@@ -147,7 +147,7 @@
                  "1bdd",
                 "gen",
                 "${file}",
-                "-out", 
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
