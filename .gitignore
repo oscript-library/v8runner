@@ -2,3 +2,4 @@ test-reports/*
 *.ospx
 tests.xml
 .scannerwork/
+oscript_modules/
