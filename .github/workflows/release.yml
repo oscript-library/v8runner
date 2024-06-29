@@ -1,0 +1,15 @@
+name: Публикация релиза
+
+on:
+  release:
+    types:
+      - published
+  workflow_dispatch:
+
+jobs:
+  release:
+    uses: autumn-library/workflows/.github/workflows/release.yml@main
+    with:
+      package_mask: "v8runner-*.ospx"
+    secrets:
+      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
