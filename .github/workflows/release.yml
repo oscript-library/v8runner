@@ -12,4 +12,4 @@ jobs:
     with:
       package_mask: "v8runner-*.ospx"
     secrets:
-      PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+      PUSH_TOKEN: ${{ secrets.GITHUB_TOKEN  }}
