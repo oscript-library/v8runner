@@ -1,0 +1,23 @@
+name: Incremental dump regression
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: read
+
+jobs:
+  regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install OneScript 2.2.0
+        run: |
+          curl --fail --location --retry 3 https://github.com/EvilBeaver/OneScript/releases/download/v2.2.0/OneScript-2.2.0-linux-x64.zip -o "$RUNNER_TEMP/onescript.zip"
+          echo "3b3b0a96e141d6758b74cbf492d5e5c11823bfd92318caff1aaa19bd500f1df7  $RUNNER_TEMP/onescript.zip" | sha256sum --check
+          unzip -q "$RUNNER_TEMP/onescript.zip" -d "$RUNNER_TEMP/onescript"
+          chmod +x "$RUNNER_TEMP/onescript/bin/oscript"
+          echo "$RUNNER_TEMP/onescript/bin" >> "$GITHUB_PATH"
+      - name: Test without a 1C installation
+        run: |
+          oscript -version
+          python3 -B -m unittest discover -s tests -p test_incremental_dump.py -v
